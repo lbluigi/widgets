@@ -22,3 +22,5 @@ The bundle is handled by Parcel.
 - ESLint
 - Prettier
 - Absolute imports
+
+The app store is handled by Redux. Even if the app is not that complex to justify its usage, it's just for demonstration purpose.

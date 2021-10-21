@@ -32,7 +32,8 @@
       "extensions": [".tsx"]
     }],
     "max-len": ["warn", {
-      "code": 80
+      "code": 80,
+      "ignoreUrls": true
     }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

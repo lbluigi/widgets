@@ -1,6 +1,12 @@
 import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { store } from 'redux-store'
 import App from './App'
 import './index.css'
 
-const app = document.getElementById('app')
-render(<App />, app)
+render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('app')
+)
