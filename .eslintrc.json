@@ -33,13 +33,15 @@
     }],
     "max-len": ["warn", {
       "code": 80,
-      "ignoreUrls": true
+      "ignoreUrls": true,
+      "ignoreComments": true
     }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "import/prefer-default-export": "off",
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
+    "no-param-reassign": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

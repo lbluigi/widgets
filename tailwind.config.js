@@ -1,10 +1,12 @@
 module.exports = {
 	// mode: 'jit', // still in preview
 	purge: ['./src/**/*.{html,js,jsx,ts,tsx}'],
-	darkMode: false,
+	darkMode: 'class',
 	theme: {
 		extend: {},
 	},
-	variants: {},
+	variants: {
+		extends: {},
+	},
 	plugins: [],
 }
