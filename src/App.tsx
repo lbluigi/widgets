@@ -1,4 +1,4 @@
-import ToggleTheme from 'components/ToggleTheme'
+import Header from 'components/Header'
 import { FC, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setTheme } from 'redux-store/theme/themeThunks'
@@ -12,9 +12,7 @@ const App: FC = () => {
 
 	return (
 		<div className="container mx-auto py-5 px-5 md:px-0 app transition">
-			<div className="flex justify-end">
-				<ToggleTheme />
-			</div>
+			<Header />
 		</div>
 	)
 }

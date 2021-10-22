@@ -1,4 +1,4 @@
-const toggleBodyThemeClass = (value: string) => {
+const toggleBodyThemeClass = (value: string): void => {
 	const { body } = document
 	const themes = ['light', 'dark']
 

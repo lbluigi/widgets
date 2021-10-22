@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import toggleBodyThemeClass from 'utils/toggleBodyThemeClass'
 
 export type Theme = 'light' | 'dark'
 
@@ -18,8 +17,6 @@ export const themeSlice = createSlice({
 		toggleTheme: (state, action: PayloadAction<Theme>) => {
 			const { payload } = action
 			state.value = payload
-
-			toggleBodyThemeClass(payload)
 		},
 	},
 })
