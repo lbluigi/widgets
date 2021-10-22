@@ -14,7 +14,7 @@ import {
 import storage from 'redux-persist/lib/storage'
 import { weatherApi } from 'services/weather'
 import themeReducer from './theme/themeSlice'
-import coordinatesReducer from './weather/coordinatesSlice'
+import coordinatesReducer from './coordinates/coordinatesSlice'
 
 const ignoredActions = [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
 

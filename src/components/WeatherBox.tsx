@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'redux-store'
-import { getUserCoordinates } from 'redux-store/weather/coordinatesThunks'
+import { getUserCoordinates } from 'redux-store/coordinates/coordinatesThunks'
 
 const WeatherBox: FC = () => {
 	const dispatch = useDispatch()
@@ -23,6 +23,13 @@ const WeatherBox: FC = () => {
 			{loading && <div>Loading...</div>}
 
 			{error && <div>{error}</div>}
+
+			{latitude && longitude && (
+				<div>
+					<p>Latitude: {latitude}</p>
+					<p>Longitude: {longitude}</p>
+				</div>
+			)}
 		</div>
 	)
 }
