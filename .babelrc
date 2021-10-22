@@ -7,7 +7,8 @@
        "alias": {
          "components": "./src/components",
          "redux-store": "./src/redux-store",
-         "utils": "./src/utils"
+         "utils": "./src/utils",
+         "services": "./src/services"
        }
      }
     ]

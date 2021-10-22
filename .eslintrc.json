@@ -34,7 +34,9 @@
     "max-len": ["warn", {
       "code": 80,
       "ignoreUrls": true,
-      "ignoreComments": true
+      "ignoreComments": true,
+      "tabWidth": 2,
+      "ignoreStrings": true
     }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
