@@ -18,7 +18,6 @@ export const getUserCoordinates = createAsyncThunk<
 			longitude,
 		}
 	} catch (err) {
-		console.log(err)
 		return rejectWithValue("Can't get the coordinates")
 	}
 })
