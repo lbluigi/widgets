@@ -3,36 +3,35 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 const { WEATHER_API_KEY } = process.env
 const baseUrl = 'http://api.weatherapi.com/v1'
 
-interface WeatherResponse {
-	current: {
-		condition: {
-			text: string
-			icon: string
-		}
-	}
-	location: {
-		country: string
-		region: string
-		name: string
-	}
-}
-
-interface WeatherState {
+interface Condition {
 	text: string
 	icon: string
+}
+
+interface Location {
 	country: string
 	region: string
 	name: string
 }
 
+interface WeatherApiResponse {
+	current: {
+		condition: Condition
+	}
+	location: Location
+}
+
+type WeatherApiState = Condition & Location
+
 export const weatherApi = createApi({
 	reducerPath: 'weatherApi',
 	baseQuery: fetchBaseQuery({ baseUrl }),
 	endpoints: (builder) => ({
-		getWeatherByCoordinates: builder.query<WeatherState, string>({
+		getWeatherByCoordinates: builder.query<WeatherApiState, string>({
 			query: (coordinates) =>
 				`/current.json?key=${WEATHER_API_KEY}&q=${coordinates}`,
-			transformResponse: (response: WeatherResponse) => {
+
+			transformResponse: (response: WeatherApiResponse) => {
 				return {
 					text: response?.current?.condition?.text,
 					icon: response?.current?.condition?.icon,

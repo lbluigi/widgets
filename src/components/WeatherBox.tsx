@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react'
+import { FC, memo, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'redux-store'
 import { getUserCoordinates } from 'redux-store/coordinates/coordinatesThunks'
@@ -40,4 +40,4 @@ const WeatherBox: FC = () => {
 	)
 }
 
-export default WeatherBox
+export default memo(WeatherBox)
