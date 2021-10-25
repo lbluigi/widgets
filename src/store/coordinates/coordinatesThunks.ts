@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { RootState } from 'redux-store'
+import { RootState } from 'store'
 import getCoordinates from 'utils/getPosition'
 
 export const getUserCoordinates = createAsyncThunk<

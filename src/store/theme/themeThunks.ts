@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { RootState } from 'redux-store'
+import { RootState } from 'store'
 import toggleBodyThemeClass from 'utils/toggleBodyThemeClass'
 
 export const setTheme = createAsyncThunk<any, void, { state: RootState }>(

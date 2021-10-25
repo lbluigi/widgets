@@ -2,7 +2,7 @@ import Header from 'components/Header'
 import WeatherBox from 'components/WeatherBox'
 import { FC, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { setTheme } from 'redux-store/theme/themeThunks'
+import { setTheme } from 'store/theme/themeThunks'
 
 const App: FC = () => {
 	const dispatch = useDispatch()

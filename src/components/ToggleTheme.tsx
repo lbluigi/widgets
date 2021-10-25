@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { RootState } from 'redux-store'
-import { toggleTheme } from 'redux-store/theme/themeSlice'
+import { RootState } from 'store'
+import { toggleTheme } from 'store/theme/themeSlice'
 import { SunIcon, MoonIcon } from '@heroicons/react/solid'
 import { useMemo } from 'react'
 import toggleBodyThemeClass from 'utils/toggleBodyThemeClass'

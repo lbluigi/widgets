@@ -1,7 +1,7 @@
 import { FC, memo, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from 'redux-store'
-import { getUserCoordinates } from 'redux-store/coordinates/coordinatesThunks'
+import { RootState } from 'store'
+import { getUserCoordinates } from 'store/coordinates/coordinatesThunks'
 import Weather from './Weather'
 
 const WeatherBox: FC = () => {
