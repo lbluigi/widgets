@@ -33,7 +33,7 @@ const WeatherBox: FC = () => {
 	}
 
 	return (
-		<Box className="h-full">
+		<Box className="h-full text-center lg:text-left">
 			<h2 className="text-lg font-semibold">Today&apos;s Weather</h2>
 			{renderContent()}
 		</Box>

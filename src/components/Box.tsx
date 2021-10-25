@@ -7,7 +7,7 @@ interface Props {
 
 const Box: FC<Props> = ({ children, className = '' }) => {
 	const classes =
-		'p-5 border-4 border-gray-800 dark:border-yellow-200 transition text-theme text-center lg:text-left'
+		'p-5 border-4 border-gray-800 dark:border-yellow-200 transition text-theme'
 
 	return <div className={`${classes} ${className}`}>{children}</div>
 }

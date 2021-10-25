@@ -3,7 +3,7 @@ import { ClockIcon } from '@heroicons/react/outline'
 import Box from './Box'
 
 const ClockBox: FC = () => {
-	const [date, setDate] = useState(new Date())
+	const [date, setDate] = useState<Date>(new Date())
 
 	useEffect(() => {
 		const timer = setInterval(() => {
@@ -16,14 +16,14 @@ const ClockBox: FC = () => {
 	}, [])
 
 	return (
-		<Box className="h-full">
+		<Box className="h-full text-center lg:text-left">
 			<div className="space-x-3 flex items-center flex-wrap h-full">
 				<div className="w-full lg:w-auto">
 					<ClockIcon className="h-10 w-10 text-theme mx-auto lg:mx-0 animate-clock" />
 				</div>
 
 				<div className="w-full lg:w-auto">
-					<div>
+					<div className="text-lg font-semibold">
 						{date.toLocaleString('en-us', {
 							day: 'numeric',
 							weekday: 'long',

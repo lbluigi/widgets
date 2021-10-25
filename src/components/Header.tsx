@@ -10,7 +10,7 @@ const Header: FC = () => {
 				<ToggleTheme />
 			</div>
 
-			<div className="my-5 h-1 bg-theme rounded-full animate-long" />
+			<div className="mt-5 h-1 bg-theme rounded-full animate-long" />
 		</>
 	)
 }
