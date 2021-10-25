@@ -22,7 +22,7 @@ const persistConfig = {
 	key: 'root',
 	version: 1,
 	storage,
-	blackList: ['coordinates'],
+	blacklist: ['coordinates'],
 }
 
 const rootReducer = combineReducers({

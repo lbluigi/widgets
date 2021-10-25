@@ -10,7 +10,7 @@ export interface CoordinatesState {
 }
 
 const initialState: CoordinatesState = {
-	loading: true,
+	loading: false,
 	error: '',
 	latitude: null,
 	longitude: null,
@@ -21,6 +21,10 @@ export const coordinatesSlice = createSlice({
 	initialState,
 	reducers: {},
 	extraReducers: (builder) => {
+		builder.addCase(getUserCoordinates.pending, (state) => {
+			state.loading = true
+		})
+
 		builder.addCase(
 			getUserCoordinates.fulfilled,
 			(state, action: PayloadAction<Coordinates>) => {
