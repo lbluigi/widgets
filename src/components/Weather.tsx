@@ -21,12 +21,16 @@ const Weather: FC = () => {
 	}
 
 	return (
-		<div className="mt-3 space-x-3 flex items-center flex-wrap">
-			<div>
-				<img src={data?.icon} alt={data?.text} className="w-10 h-10" />
+		<div className="space-x-3 flex items-center flex-wrap">
+			<div className="w-full lg:w-auto">
+				<img
+					src={data?.icon}
+					alt={data?.text}
+					className="w-10 h-10 mx-auto lg:mx-0"
+				/>
 			</div>
 
-			<div>
+			<div className="w-full lg:w-auto">
 				<div>
 					<span className="font-semibold">Condition: </span>
 					<span>{data?.text}</span>

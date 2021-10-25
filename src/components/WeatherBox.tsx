@@ -2,6 +2,7 @@ import { FC, memo, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'store'
 import { getUserCoordinates } from 'store/coordinates/coordinatesThunks'
+import Box from './Box'
 import Weather from './Weather'
 
 const WeatherBox: FC = () => {
@@ -15,7 +16,7 @@ const WeatherBox: FC = () => {
 		dispatch(getUserCoordinates())
 	}, [dispatch])
 
-	const renderBox = () => {
+	const renderContent = () => {
 		if (loading) {
 			return 'Loading...'
 		}
@@ -32,11 +33,10 @@ const WeatherBox: FC = () => {
 	}
 
 	return (
-		<div className="p-5 border-4 border-gray-800 dark:border-yellow-200 transition text-theme">
+		<Box className="h-full">
 			<h2 className="text-lg font-semibold">Today&apos;s Weather</h2>
-
-			{renderBox()}
-		</div>
+			{renderContent()}
+		</Box>
 	)
 }
 

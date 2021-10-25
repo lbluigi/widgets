@@ -17,6 +17,7 @@ module.exports = {
 			},
 			animation: {
 				long: 'long 2s ease-in-out',
+				clock: 'spin 1s ease-in-out 2s',
 			},
 		},
 	},
