@@ -13,3 +13,11 @@ body.light {
 body.dark {
   @apply bg-gray-800;
 }
+
+.text-theme {
+  @apply text-gray-800 dark:text-yellow-200 transition;
+}
+
+.bg-theme {
+  @apply bg-gray-800 dark:bg-yellow-200 transition;
+}

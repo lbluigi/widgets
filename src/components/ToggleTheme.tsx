@@ -22,7 +22,7 @@ const ToggleTheme = () => {
 		<button
 			onClick={onClick}
 			type="button"
-			className="transition rounded-full p-3 shadow bg-gray-800 dark:bg-yellow-200">
+			className="rounded-full p-3 shadow bg-theme">
 			{isLight ? (
 				<SunIcon className="h-5 w-5 text-yellow-200" />
 			) : (

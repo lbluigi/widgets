@@ -22,7 +22,7 @@ const persistConfig = {
 	key: 'root',
 	version: 1,
 	storage,
-	blacklist: ['coordinates'],
+	blacklist: ['coordinates', 'weatherApi'],
 }
 
 const rootReducer = combineReducers({
