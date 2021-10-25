@@ -17,8 +17,7 @@ const Weather: FC = () => {
 	}
 
 	if (error) {
-		console.log(error)
-		return <div>Err</div>
+		return <div>Error</div>
 	}
 
 	return (
