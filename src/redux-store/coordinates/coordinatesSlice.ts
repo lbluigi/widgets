@@ -39,7 +39,7 @@ export const coordinatesSlice = createSlice({
 		builder.addCase(getUserCoordinates.rejected, (state, action) => {
 			state.loading = false
 
-			if (typeof action.payload === 'string') {
+			if (action.payload) {
 				state.error = action.payload
 			} else {
 				state.error = 'Unexpected error.'
