@@ -14,10 +14,10 @@ const App: FC = () => {
 	}, [dispatch])
 
 	return (
-		<div className="container mx-auto py-5 space-y-5 px-5 md:px-0 app transition">
+		<div className="container mx-auto py-5 space-y-10 px-5 md:px-0 app transition">
 			<Header />
 
-			<div className="flex flex-wrap space-y-5 lg:space-y-0 lg:space-x-5">
+			<div className="flex flex-wrap space-y-10 lg:space-y-0 lg:space-x-10">
 				<div className="w-full lg:flex-1">
 					<WeatherBox />
 				</div>

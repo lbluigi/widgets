@@ -43,7 +43,9 @@ const AddTodo: FC = () => {
 				value={inputText}
 			/>
 
-			<button type="submit" className="text-theme-inverse bg-theme px-5">
+			<button
+				type="submit"
+				className="text-theme-inverse bg-theme px-5 font-semibold">
 				Add item
 			</button>
 		</form>
