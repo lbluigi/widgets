@@ -20,9 +20,29 @@ export const todoSlice = createSlice({
 			const { payload } = action
 			state[payload.id] = payload
 		},
+
+		deleteTodo: (state, action: PayloadAction<string>) => {
+			const { payload } = action
+			delete state[payload]
+		},
+
+		toggleCompleteTodo: (state, action: PayloadAction<string>) => {
+			const { payload } = action
+			state[payload].completed = !state[payload].completed
+		},
+
+		editTodo: (state, action: PayloadAction<{ id: string; text: string }>) => {
+			const { payload } = action
+
+			state[payload.id] = {
+				...state[payload.id],
+				text: payload.text,
+			}
+		},
 	},
 })
 
-export const { addTodo } = todoSlice.actions
+export const { addTodo, deleteTodo, toggleCompleteTodo, editTodo } =
+	todoSlice.actions
 
 export default todoSlice.reducer

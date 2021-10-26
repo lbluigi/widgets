@@ -12,6 +12,7 @@ import {
 	REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import { Persistor } from 'redux-persist/es/types'
 import { weatherApi } from 'services/weather'
 import themeReducer from './theme/themeSlice'
 import todoReducer from './todo/todoSlice'
@@ -47,7 +48,7 @@ export const store = configureStore({
 
 setupListeners(store.dispatch)
 
-export const persistor = persistStore(store)
+export const persistor: Persistor = persistStore(store)
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

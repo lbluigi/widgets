@@ -22,7 +22,9 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			backgroundColor: ['checked'],
+		},
 	},
 	plugins: [],
 }

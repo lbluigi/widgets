@@ -2,6 +2,8 @@ import { FC, useEffect, useState } from 'react'
 import { ClockIcon } from '@heroicons/react/outline'
 import Box from './Box'
 
+const formatDateWithTwoDigits = (date: number) => `0${date}`.slice(-2)
+
 const ClockBox: FC = () => {
 	const [date, setDate] = useState<Date>(new Date())
 
@@ -33,7 +35,8 @@ const ClockBox: FC = () => {
 					</div>
 
 					<div className="text-4xl font-extrabold">
-						{date.getHours()}:{`0${date.getMinutes()}`.slice(-2)}
+						{formatDateWithTwoDigits(date.getHours())}:
+						{formatDateWithTwoDigits(date.getMinutes())}
 					</div>
 				</div>
 			</div>
