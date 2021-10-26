@@ -7,10 +7,10 @@ The bundle is handled by Parcel.
 
 - Today's weather (fetched from some open weather api)
 - Dark theme
+- To do list
 
 ### Future Features
 
-- To do list
 - Random image every time user opens the app (fetched from some open image api)
 - Offline usage
 
