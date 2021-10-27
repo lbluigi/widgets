@@ -50,7 +50,7 @@ const TodoBox: FC = () => {
 			)}
 
 			{showCompleted && (
-				<div className="border-t border-gray-800 dark:border-yellow-200">
+				<div className="border-t border-theme">
 					{todoCompletedValues.map((item) => (
 						<TodoItem
 							key={item.id}

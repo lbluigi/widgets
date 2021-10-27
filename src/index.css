@@ -4,28 +4,29 @@
 
 body {
   font-family: 'Urbanist', sans-serif;
-}
-
-body.light {
-  @apply bg-yellow-100;
-}
-
-body.dark {
-  @apply bg-gray-800;
+  @apply bg-gray-50;
 }
 
 .text-theme {
-  @apply text-gray-800 dark:text-yellow-200 transition;
+  @apply text-blue-900 dark:text-pink-200 transition;
 }
 
 .text-theme-inverse {
-  @apply text-yellow-200 dark:text-gray-800 transition;
+  @apply text-pink-200 dark:text-blue-900 transition;
 }
 
 .bg-theme {
-  @apply bg-gray-800 dark:bg-yellow-200 transition;
+  @apply bg-blue-900 dark:bg-pink-200 transition;
 }
 
 .bg-theme-inverse {
-  @apply bg-yellow-200 dark:bg-gray-800 transition;
+  @apply bg-pink-200 dark:bg-blue-900 transition;
+}
+
+.border-theme {
+  @apply dark:border-blue-900 border-pink-200;
+}
+
+.solid-shadow {
+  box-shadow: 10px 10px;
 }

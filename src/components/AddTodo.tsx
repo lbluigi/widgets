@@ -38,14 +38,14 @@ const AddTodo: FC = () => {
 			<input
 				type="text"
 				onChange={handleChangeText}
-				className="border-2 border-gray-800 dark:border-yellow-200 outline-none p-2 bg-transparent flex-1 placeholder-gray-800 dark:placeholder-yellow-200"
+				className="border-2 border-theme outline-none p-2 bg-transparent flex-1 dark:placeholder-blue-900 placeholder-pink-200"
 				placeholder="Type here..."
 				value={inputText}
 			/>
 
 			<button
 				type="submit"
-				className="text-theme-inverse bg-theme px-5 font-semibold">
+				className="text-theme bg-theme-inverse px-5 font-semibold">
 				Add item
 			</button>
 		</form>

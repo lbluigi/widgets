@@ -21,9 +21,9 @@ const ToggleTheme = () => {
 	return (
 		<button onClick={onClick} type="button" className="p-3 shadow bg-theme">
 			{isLight ? (
-				<SunIcon className="h-5 w-5 text-yellow-200" />
+				<SunIcon className="h-5 w-5 text-pink-200" />
 			) : (
-				<MoonIcon className="h-5 w-5 text-gray-800" />
+				<MoonIcon className="h-5 w-5 text-blue-900" />
 			)}
 		</button>
 	)

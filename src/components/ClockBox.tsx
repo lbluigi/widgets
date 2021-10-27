@@ -21,7 +21,7 @@ const ClockBox: FC = () => {
 		<Box className="h-full text-center lg:text-left">
 			<div className="space-x-3 flex items-center flex-wrap h-full">
 				<div className="w-full lg:w-auto">
-					<ClockIcon className="h-10 w-10 text-theme mx-auto lg:mx-0 animate-clock" />
+					<ClockIcon className="h-10 w-10 text-theme-inverse mx-auto lg:mx-0 animate-clock" />
 				</div>
 
 				<div className="w-full lg:w-auto">
