@@ -8,23 +8,23 @@ body {
 }
 
 .text-theme {
-  @apply text-blue-900 dark:text-pink-200 transition;
+  @apply dark:text-blue-900 text-pink-200 transition;
 }
 
 .text-theme-inverse {
-  @apply text-pink-200 dark:text-blue-900 transition;
+  @apply dark:text-pink-200 text-blue-900 transition;
 }
 
 .bg-theme {
-  @apply bg-blue-900 dark:bg-pink-200 transition;
+  @apply dark:bg-blue-900 bg-pink-200 transition;
 }
 
 .bg-theme-inverse {
-  @apply bg-pink-200 dark:bg-blue-900 transition;
+  @apply dark:bg-pink-200 bg-blue-900 transition;
 }
 
 .border-theme {
-  @apply dark:border-blue-900 border-pink-200;
+  @apply border-blue-900 dark:border-pink-200;
 }
 
 .solid-shadow {

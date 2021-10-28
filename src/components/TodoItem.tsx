@@ -36,7 +36,7 @@ const TodoItem: FC<Props> = ({ id, text, completed }) => {
 			<div className="flex items-center flex-1 space-x-2">
 				<input
 					type="checkbox"
-					className="appearance-none w-4 h-4 border border-theme dark:checked:bg-blue-900 checked:bg-pink-200 transition cursor-pointer"
+					className="appearance-none w-4 h-4 border border-theme checked:bg-blue-900 dark:checked:bg-pink-200 transition cursor-pointer"
 					checked={completed}
 					onChange={handleToggleCompleteTodo}
 				/>

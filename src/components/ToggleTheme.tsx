@@ -24,9 +24,9 @@ const ToggleTheme = () => {
 			type="button"
 			className="p-3 shadow bg-theme toggle-theme-btn">
 			{isLight ? (
-				<SunIcon className="h-5 w-5 text-pink-200" />
+				<SunIcon className="h-5 w-5 text-blue-900" />
 			) : (
-				<MoonIcon className="h-5 w-5 text-blue-900" />
+				<MoonIcon className="h-5 w-5 text-pink-200" />
 			)}
 		</button>
 	)
