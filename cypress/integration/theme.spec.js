@@ -10,7 +10,7 @@ describe('Theme', () => {
 	})
 
 	it('shoud toggle dark theme', () => {
-		cy.get('button.toggle-theme-btn')
+		cy.get('[data-cy="toggle-theme-btn"]')
 			.click()
 			.then(() => {
 				cy.get('body.dark')
@@ -18,7 +18,7 @@ describe('Theme', () => {
 	})
 
 	it('shoud toggle light theme', () => {
-		cy.get('button.toggle-theme-btn')
+		cy.get('[data-cy="toggle-theme-btn"]')
 			.click()
 			.then(() => {
 				cy.get('body.light')

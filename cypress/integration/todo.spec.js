@@ -24,7 +24,7 @@ describe('To do', () => {
 	})
 
 	it('should toggle a to do item as completed', () => {
-		cy.get('input[type="checkbox"].toggle-todo-checkbox').first().click()
+		cy.get('[data-cy="toggle-todo-checkbox"]').first().click()
 	})
 
 	it('should change to do item text', () => {
@@ -32,10 +32,10 @@ describe('To do', () => {
 	})
 
 	it('should toggle a to do item as not completed', () => {
-		cy.get('input[type="checkbox"]:checked.toggle-todo-checkbox').click()
+		cy.get('[data-cy="toggle-todo-checkbox"]:checked').click()
 	})
 
 	it('should delete a to do item', () => {
-		cy.get('svg.delete-todo-icon').first().click()
+		cy.get('[data-cy="delete-todo-icon"]').first().click()
 	})
 })
