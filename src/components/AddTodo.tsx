@@ -38,7 +38,7 @@ const AddTodo: FC = () => {
 			<input
 				type="text"
 				onChange={handleChangeText}
-				className="border-2 border-theme outline-none p-2 bg-transparent flex-1 placeholder-blue-900 dark:placeholder-pink-200"
+				className="border-2 border-theme outline-none p-2 bg-transparent flex-1 placeholder-blue-900 dark:placeholder-pink-200 add-todo-input"
 				placeholder="Type here..."
 				value={inputText}
 			/>
