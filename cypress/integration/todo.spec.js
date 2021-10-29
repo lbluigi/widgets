@@ -9,10 +9,20 @@ describe('To do', () => {
 		cy.visit('/')
 	})
 
+	it('should be 0 to do items by default', () => {
+		cy.contains(
+			'Here you will find your to do items once you start adding them with the input field above.'
+		).should('be.visible')
+	})
+
 	it('should add 3 to do items and diaplay them', () => {
 		cy.get(addTodoInput).type('Buy food for tonight')
 		cy.contains(addItemText).click()
 		cy.get(input('Buy food for tonight')).should('be.visible')
+
+		cy.contains(
+			'You can edit a list item. Click on its text and start typing.'
+		).should('be.visible')
 
 		cy.get(addTodoInput).type('Book hotel for vacation')
 		cy.contains(addItemText).click()
