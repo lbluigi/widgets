@@ -33,10 +33,10 @@ const AddAppointment: FC = () => {
 			onSubmit={handleSubmit(handleAddAppointment)}
 			className="space-y-3 flex flex-col w-full">
 			<div className="flex space-x-3">
-				<div className="flex-1 space-y-3">
+				<div className="flex-1">
 					<input
 						type="date"
-						className="w-full border-2 border-theme outline-none p-2 bg-transparent placeholder-blue-900 dark:placeholder-pink-200"
+						className="mb-1 w-full border-2 border-theme outline-none p-2 bg-transparent placeholder-blue-900 dark:placeholder-pink-200"
 						{...register('date', {
 							required: 'Date is required',
 						})}
@@ -47,10 +47,10 @@ const AddAppointment: FC = () => {
 					)}
 				</div>
 
-				<div className="flex-1 space-y-3">
+				<div className="flex-1">
 					<input
 						type="time"
-						className="w-full border-2 border-theme outline-none p-2 bg-transparent placeholder-blue-900 dark:placeholder-pink-200"
+						className="mb-1 w-full border-2 border-theme outline-none p-2 bg-transparent placeholder-blue-900 dark:placeholder-pink-200"
 						{...register('time', {
 							required: 'Time is required',
 						})}
@@ -62,17 +62,19 @@ const AddAppointment: FC = () => {
 				</div>
 			</div>
 
-			<input
-				className="border-2 border-theme outline-none p-2 bg-transparent placeholder-blue-900 dark:placeholder-pink-200"
-				placeholder="Add appointment text..."
-				{...register('text', {
-					required: 'Appointment details are required',
-				})}
-			/>
+			<div className="flex-1">
+				<input
+					className="mb-1 w-full border-2 border-theme outline-none p-2 bg-transparent placeholder-blue-900 dark:placeholder-pink-200"
+					placeholder="Add appointment text..."
+					{...register('text', {
+						required: 'Appointment details are required',
+					})}
+				/>
 
-			{!!formState.errors.text?.message && (
-				<p className="text-red-500">{formState.errors.text?.message}</p>
-			)}
+				{!!formState.errors.text?.message && (
+					<p className="text-red-500">{formState.errors.text?.message}</p>
+				)}
+			</div>
 
 			<Button type="submit">Add appointment</Button>
 		</form>

@@ -11,7 +11,7 @@ const AppointmentsBox: FC = () => {
 
 	return (
 		<Box className="space-y-3">
-			<div className="mb-5">
+			<div className="space-y-3">
 				<h2 className="text-lg font-semibold text-center lg:text-left">
 					Appointments
 				</h2>
