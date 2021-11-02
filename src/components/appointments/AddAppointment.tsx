@@ -40,6 +40,7 @@ const AddAppointment: FC = () => {
 						{...register('date', {
 							required: 'Date is required',
 						})}
+						data-cy="apt-input-date"
 					/>
 
 					{!!formState.errors.date?.message && (
@@ -54,6 +55,7 @@ const AddAppointment: FC = () => {
 						{...register('time', {
 							required: 'Time is required',
 						})}
+						data-cy="apt-input-time"
 					/>
 
 					{!!formState.errors.time?.message && (
@@ -69,6 +71,7 @@ const AddAppointment: FC = () => {
 					{...register('text', {
 						required: 'Appointment details are required',
 					})}
+					data-cy="apt-input-text"
 				/>
 
 				{!!formState.errors.text?.message && (

@@ -15,7 +15,7 @@ describe('To do', () => {
 		).should('be.visible')
 	})
 
-	it('should add 3 to do items and diaplay them', () => {
+	it('should add 3 to do items and display them', () => {
 		cy.get(addTodoInput).type('Buy food for tonight')
 		cy.contains(addItemText).click()
 		cy.get(input('Buy food for tonight')).should('be.visible')
