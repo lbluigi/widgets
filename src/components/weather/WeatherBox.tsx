@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'store'
 import { getUserCoordinates } from 'store/coordinates/coordinatesThunks'
-import Box from './Box'
+import Box from '../shared/Box'
 import Weather from './Weather'
 
 const WeatherBox: FC = () => {

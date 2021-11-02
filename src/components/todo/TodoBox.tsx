@@ -1,21 +1,18 @@
+import Box from 'components/shared/Box'
 import { FC, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from 'store'
 import AddTodo from './AddTodo'
-import Box from './Box'
 import TodoItem from './TodoItem'
 
 const TodoBox: FC = () => {
 	const todoList = useSelector((state: RootState) => state.todo)
 	const todos = Object.values(todoList)
 
-	const todoValues = todos.filter((item) => !item.completed)
-	const todoCompletedValues = todos.filter((item) => item.completed)
+	const todoNotCompleted = todos.filter((item) => !item.completed)
+	const todoCompleted = todos.filter((item) => item.completed)
 
-	const showCompleted = useMemo(
-		() => todoCompletedValues.length > 0,
-		[todoCompletedValues]
-	)
+	const showCompleted = useMemo(() => todoCompleted.length > 0, [todoCompleted])
 
 	return (
 		<Box className="space-y-3">
@@ -23,18 +20,16 @@ const TodoBox: FC = () => {
 				To do list
 			</h2>
 
-			<div>
-				<AddTodo />
-			</div>
+			<AddTodo />
 
-			{todoValues.length <= 0 && !showCompleted && (
+			{todoNotCompleted.length <= 0 && !showCompleted && (
 				<div className="italic">
 					Here you will find your to do items once you start adding them with
 					the input field above.
 				</div>
 			)}
 
-			{todoValues.map((item) => (
+			{todoNotCompleted.map((item) => (
 				<TodoItem
 					key={item.id}
 					id={item.id}
@@ -43,7 +38,7 @@ const TodoBox: FC = () => {
 				/>
 			))}
 
-			{todoValues.length > 0 && (
+			{todoNotCompleted.length > 0 && (
 				<div className="italic">
 					You can edit a list item. Click on its text and start typing.
 				</div>
@@ -51,7 +46,7 @@ const TodoBox: FC = () => {
 
 			{showCompleted && (
 				<div className="border-t border-theme">
-					{todoCompletedValues.map((item) => (
+					{todoCompleted.map((item) => (
 						<TodoItem
 							key={item.id}
 							id={item.id}

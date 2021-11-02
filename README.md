@@ -11,7 +11,6 @@ The bundle is handled by Parcel.
 
 ### Future Features
 
-- Random image every time user opens the app (fetched from some open image api)
 - Offline usage
 
 ### Optional Future Features

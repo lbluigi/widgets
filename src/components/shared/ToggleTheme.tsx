@@ -22,7 +22,7 @@ const ToggleTheme = () => {
 		<button
 			onClick={onClick}
 			type="button"
-			className="p-3 shadow bg-theme"
+			className="p-3 bg-theme"
 			data-cy="toggle-theme-btn">
 			{isLight ? (
 				<SunIcon className="h-5 w-5 text-blue-900" />

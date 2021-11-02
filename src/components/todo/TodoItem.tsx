@@ -3,13 +3,14 @@ import * as PropTypes from 'prop-types'
 import { XCircleIcon } from '@heroicons/react/outline'
 import debounce from 'lodash.debounce'
 import { useDispatch } from 'react-redux'
-import { deleteTodo, editTodo, toggleCompleteTodo } from 'store/todo/todoSlice'
+import {
+	deleteTodo,
+	editTodo,
+	Todo,
+	toggleCompleteTodo,
+} from 'store/todo/todoSlice'
 
-interface Props {
-	id: string
-	text: string
-	completed: boolean
-}
+interface Props extends Todo {}
 
 const TodoItem: FC<Props> = ({ id, text, completed }) => {
 	const dispatch = useDispatch()

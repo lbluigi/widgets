@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-const addTodoInput = 'input.add-todo-input'
+const addTodoInput = '[data-cy="add-todo-input"]'
 const addItemText = 'Add item'
 const input = (value) => `input[value="${value}"]`
 

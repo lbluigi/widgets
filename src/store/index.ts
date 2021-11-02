@@ -16,6 +16,7 @@ import { Persistor } from 'redux-persist/es/types'
 import { weatherApi } from 'services/weather'
 import themeReducer from './theme/themeSlice'
 import todoReducer from './todo/todoSlice'
+import appointmentsReducer from './appointments/appointmentsSlice'
 import coordinatesReducer from './coordinates/coordinatesSlice'
 
 const ignoredActions = [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
@@ -31,6 +32,7 @@ const rootReducer = combineReducers({
 	theme: themeReducer,
 	coordinates: coordinatesReducer,
 	todo: todoReducer,
+	appointments: appointmentsReducer,
 	[weatherApi.reducerPath]: weatherApi.reducer,
 })
 
