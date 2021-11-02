@@ -8,7 +8,7 @@ describe('Locators', () => {
 	it('locating elements with get', () => {
 		// Get elements by selector (tag, class, id, attribute)
 		cy.get('button')
-		cy.get('button.toggle-theme-btn')
+		cy.get('[data-cy="toggle-theme-btn"]')
 		cy.get('[type=submit]')
 		cy.get('.solid-shadow')
 	})
