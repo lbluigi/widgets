@@ -1,5 +1,7 @@
 # React Web App
 
+https://parcel-react-widgets.netlify.app/
+
 This is a widget aggregation built with React using Typescript.
 The bundle is handled by Parcel.
 
