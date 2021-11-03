@@ -1,4 +1,5 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi } from '@reduxjs/toolkit/query/react'
+import { fetchBaseQuery } from '@reduxjs/toolkit/query'
 
 const { WEATHER_API_KEY } = process.env
 const baseUrl = 'http://api.weatherapi.com/v1'
