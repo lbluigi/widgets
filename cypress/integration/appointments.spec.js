@@ -21,4 +21,8 @@ describe('Appointments', () => {
 			'be.visible'
 		)
 	})
+
+	it('should delete an appointment', () => {
+		cy.get('[data-cy="delete-appointment-icon"]').first().click()
+	})
 })

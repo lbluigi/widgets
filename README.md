@@ -8,6 +8,7 @@ The bundle is handled by Parcel.
 - Today's weather (fetched from some open weather api)
 - Dark theme
 - To do list
+- Appointment creation
 
 ### Future Features
 
@@ -15,7 +16,7 @@ The bundle is handled by Parcel.
 
 ### Optional Future Features
 
-- Appointment creation and reminder (notifications?)
+- Appointment reminder (notifications?)
 
 ### Dev Features
 
